@@ -9,6 +9,7 @@ function FileUpload({ onDataLoaded }) {
         header: true,
         skipEmptyLines: true,
         complete: (results) => {
+          console.log("Companies data:", results.data);
           onDataLoaded(results.data);
         },
         error: (error) => {
